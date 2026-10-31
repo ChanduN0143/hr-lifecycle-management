@@ -1,0 +1,27 @@
+{
+  "name": "hr-lifecycle-management",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Synthetic HR onboarding/offboarding lifecycle management platform",
+  "scripts": {
+    "generate": "node generator/generate.js",
+    "validate": "node generator/validate.js",
+    "server": "node backend/server.js",
+    "dev": "concurrently \"npm:server\" \"npm:client\"",
+    "client": "npm --prefix frontend run dev",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
